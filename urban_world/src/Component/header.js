@@ -20,6 +20,7 @@ const Header = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
     return (
+     
       <div className=" jumbotron-fluid " >
         <div className="container-fluid  container">
         <div>
@@ -32,14 +33,14 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/">Pricing</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Product</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Company
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
@@ -55,7 +56,7 @@ const Header = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText><button className="btn rounded-pill ml-2 sign_in ">Sign in</button></NavbarText>
         </Collapse>
       </Navbar>
     </div>
@@ -70,6 +71,7 @@ const Header = (props) => {
           </div>
          
       </div>
+      
     );
   };
   

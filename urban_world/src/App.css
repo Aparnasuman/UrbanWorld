@@ -3,9 +3,15 @@
   padding:0px;
   
 }
+.App{
+  background: url('./App.jpg');
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
 .jumbotron-fluid{
  background-image: url('./back.jpg') !important;
- height: 80vh;
+ height: 85vh;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   color:white;
@@ -14,6 +20,10 @@
 
 .navbar-light .navbar-brand {
   color: #ffff;
+  font-size: 30px;
+}
+.navbar-light .navbar-brand:hover{
+  color:#bc9d4080;
   font-size: 30px;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -42,4 +52,20 @@
   color: #ffff !important;
   background-color: black !important;
   border-color: black !important;
+}
+.sign_in {
+  color: #ffff !important;
+background-color: #7d8753bf !important;
+width: 100px;
+}
+.article{
+  background-color: #00000057;
+}
+.art_card {
+  color: #ffff !important;
+  background-color: #e59129a3 !important;
+  
+}
+.crd-0{
+  display: flex;
 }
