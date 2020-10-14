@@ -20,11 +20,14 @@ const Header = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
     return (
-      <div className="jumbotron jumbotron-fluid">
+      <div className=" jumbotron-fluid " >
         <div className="container-fluid  container">
         <div>
         <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">UrbanWorld</NavbarBrand>
+        <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+      </form>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -56,10 +59,11 @@ const Header = (props) => {
         </Collapse>
       </Navbar>
     </div>
- <div className="row justify-content-center">
-           <div className="col-4 mt-8">
-              <h1>UrbanWorld</h1>
-              <button className="btn btn-warning rounded-pill btn-lg">CONTACT</button>
+    <div className="row justify-content-center mt-5 pt-5" >
+      
+           <div className="  justify-content-center btn-spc">
+           
+              <button className="btn btn-warning rounded-pill btn-lg my-5 ">CONTACT</button>
      </div>
     
   </div>
