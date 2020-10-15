@@ -26,8 +26,8 @@ const Header = (props) => {
         <div>
         <Navbar color="light" light expand="md">
         <NavbarBrand href="/">UrbanWorld</NavbarBrand>
-        <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+        <form className="form-inline my-2 my-lg-0">
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
       </form>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -64,7 +64,7 @@ const Header = (props) => {
       
            <div className="  justify-content-center btn-spc">
            
-              <button className="btn btn-warning rounded-pill btn-lg my-5 ">CONTACT</button>
+              <button className="btn btn-warning rounded-pill btn-lg ">CONTACT</button>
      </div>
     
   </div>

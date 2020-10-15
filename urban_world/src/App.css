@@ -69,3 +69,25 @@ width: 100px;
 .crd-0{
   display: flex;
 }
+
+ .section {
+    color: white;
+    background-color: #a37024fa;
+}
+.section-card{
+  border: none !important;
+  background-color: transparent !important;
+}
+.text-muted {
+  color: #54e996 !important;
+}
+
+.btn-clr{
+  background-color: thistle !important;
+}
+.img_0{
+  height: 67% !important;
+}
+.img_hide{
+  display: none !important;
+}
