@@ -91,3 +91,70 @@ width: 100px;
 .img_hide{
   display: none !important;
 }
+.img_pag{
+  height: 67% !important;
+}
+#page-numbers{
+  color: white;
+  text-align: center;
+}
+#pagination-list{
+  color: white;
+ 
+}
+.pag-d{
+  color: white !important;
+  margin: 0px 10px;
+ 
+  background-color:#132305 !important;  
+}
+.sctn{
+  color:#ffff!important;
+     font-weight: 500 !important;
+     font-size: 20px !important;
+}
+  .sctn:focus {
+    outline: 0;
+     box-shadow: none !important; 
+     
+}
+
+.paginate-section{
+ background-color: #735e24;
+}
+
+.main-sc {
+    position: absolute;
+    top: 66px;
+}
+
+.grp{
+  background-color: #fff !important;
+}
+.img_1{
+  margin: 0px !important;
+}
+.imgsc{
+  height: 100% !important;
+}
+
+.sc-main:nth-child(2) {
+  margin-top: 55px;
+  padding: 30px;
+}
+.sc-main:nth-child(4) {
+  margin-top: 10px;
+  padding: 30px;
+}
+.sc-main:nth-child(1) {
+  margin-top: 20px;
+  padding: 30px;
+}
+.sc-main:nth-child(3) {
+  margin-top: 35px;
+  padding: 40px;
+  transition: transform 1s;
+}
+.sc-main:hover {
+  transform: rotateY(180deg);
+}
