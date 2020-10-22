@@ -24,7 +24,7 @@ render(){
     return(
         <div className="imag-group grp">
         <div className="card-deck img_1"   >
-        {this.state.Item.slice(10, this.state.showItems).map((item, idx)=>  {
+        {this.state.Item.slice(12, this.state.showItems).map((item, idx)=>  {
              const logo = require(`${item.picture}`);
             return(
 <div className="card section-card sc-main" key={idx}   index={idx} >
