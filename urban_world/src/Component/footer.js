@@ -34,30 +34,30 @@ class Footer extends React.Component{
             </div>
 
             <div>
-                <i class="fa fa-phone"></i>
-                <p>+977 1-449278</p>
+                <i className="fa fa-phone"></i>
+                <p>+913045-14-771</p>
             </div>
 
             <div>
-                <i class="fa fa-envelope"></i>
+                <i className="fa fa-envelope"></i>
                 <p><a href="https://www.infinitylabs.in/">urbanWorld.in</a></p>
             </div>
 
         </div>
 
-        <div class="footer-right">
+        <div className="footer-right">
 
-            <p class="footer-company-about">
+            <p className="footer-company-about">
                 <span>About the company</span>
                UrbanWorld designs service provider of wooden material that are flexible and aid in quick deployment of new services. By leveraging our services, enterprises can increase their service velocity and have a competitive edge in the market.
             </p>
 
-            <div class="footer-icons">
+            <div className="footer-icons">
 
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i className="fa fa-facebook"></i></a>
+                <a href="#"><i className="fa fa-twitter"></i></a>
+                <a href="#"><i className="fa fa-linkedin"></i></a>
+                <a href="#"><i className="fa fa-github"></i></a>
 
             </div>
 

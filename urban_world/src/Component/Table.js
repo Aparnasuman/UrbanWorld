@@ -1,35 +1,38 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {getUsers} from '../store/actions/usersAction'
-class Section1 extends  React.Component{
+import axios from 'axios';
+class Table extends  React.Component{
     constructor(props){
         super(props);
         this.state = {
-         
+            Item: [],
             showItems: 14,
-            showItem:11
+        
              }
         }
 
     componentDidMount(){
-       
+
         // here name should 
-        this.props.getUsers()
-      
+        axios.get(`http://localhost:3000/woodenItem`).then(res => {
+            const Item = res.data;
+            console.log(Item);
+            this.setState({ Item  });
+          })
     }
  
 render(){
-    const {users} = this.props.users
-    console.log(this.props.users)
     return(
-        <div className="imag-group grp">
+       
+                
         <div className="card-deck img_1"   >
-        {users.slice(12, this.state.showItems).map((item, idx)=>  {
+        {this.state.Item.filter(item => item.name.includes('Tab')).map((item, idx)=>  {
              const logo = require(`${item.picture}`);
+            console.log(item);
+            
             return(
 <div className="card section-card sc-main" key={idx}   index={idx} >
-<img className="card-img-top  imgsc" src={logo} alt="nice" ></img>
 <div className="card-body main-sc">
+<img src={logo} alt={item.name} className="card-img-top img_pag"/>
 <h5 className="card-title">{item.name}</h5>
         <p className="card-text">{item.details}</p>
         <p className="card-text"><small className="text-muted">{item.price}</small></p>
@@ -40,14 +43,8 @@ render(){
         ) })}
         
 </div>
-
-
-</div>
-
     )
+
 }
 }
-
-const mapStateToProps  = (state) => ({users:state.users})
-
-export default connect(mapStateToProps, {getUsers})(Section1)
+export default Table;

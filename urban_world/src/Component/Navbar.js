@@ -16,22 +16,27 @@ import {
 } from 'reactstrap';
 const NavBaritem = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggle = () => setIsOpen(!isOpen);
+
     return (
      
     
-        <div>
+       
+
         <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">UrbanWorld</NavbarBrand>
+         <NavbarBrand href="/">UrbanWorld</NavbarBrand>
         <form className="form-inline my-2 my-lg-0">
       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
       </form>
+   
         <NavbarToggler onClick={toggle} />
+       
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
+         
             <NavItem>
-              <NavLink href="/components/">Pricing</NavLink>
+              <NavLink href="/">Pricing</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">Company</NavLink>
@@ -40,12 +45,14 @@ const NavBaritem = (props) => {
               <DropdownToggle nav caret>
                 Product
               </DropdownToggle>
+            
               <DropdownMenu right>
+               
                 <DropdownItem>
-                  Sofa Set
+                 Sofa Set
                 </DropdownItem>
                 <DropdownItem>
-                Wooden Dining Table
+              Wooden Dining Table
                 </DropdownItem>
                 <DropdownItem  />
                 <DropdownItem>
@@ -58,12 +65,13 @@ const NavBaritem = (props) => {
                   Stool
                 </DropdownItem>
               </DropdownMenu>
+             
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText><button className="btn rounded-pill ml-2 sign_in ">Sign in</button></NavbarText>
+          <NavbarText><button className="btn rounded-pill ml-2 sign_in " >Sign in</button></NavbarText>
         </Collapse>
       </Navbar>
-    </div>
+ 
    
       
     );

@@ -1,11 +1,11 @@
 import React from 'react';
-import axios from 'axios';
-
+import {connect} from 'react-redux'
+import {getUsers} from '../store/actions/usersAction'
 class Section extends React.Component{
 constructor(props){
     super(props);
     this.state = {
-        Item: [],
+      users: [],
         collapse: false,
         showItems: 10,
         showItems1:15
@@ -25,23 +25,22 @@ handleImage=()=>{
 
 }
 componentDidMount(){
-    axios.get(`http://localhost:3000/woodenItem`).then(res => {
-        const Item = res.data;
-        console.log(Item);
-        this.setState({ Item ,
-            showItems:
-            this.state.showItems >= this.state.Item.length ?
-            this.state.showItems : this.state.showItems + 1,
-            showItems1:
-            this.state.showItems1 >= this.state.Item.length ?
-            this.state.showItems1 : this.state.showItems1 + 1
-           
-        });
-      })
+  this.props.getUsers()
+  const {users} = this.props.users
+  console.log(this.props.users)
+    this.setState({ 
+        showItems:
+        this.state.showItems >= users.length ?
+        this.state.showItems : this.state.showItems + 1,
+        showItems1:
+        this.state.showItems1 >= users.length ?
+        this.state.showItems1 : this.state.showItems1 + 1
+       
+    });
 }
 
  render(){
-   
+  const {users} = this.props.users
      return(
          <div className="section container-fluid">
           <div className="row ">
@@ -52,7 +51,7 @@ componentDidMount(){
                  <p >Buy Furniture Online from our extensive collection of wooden furniture units to give your home an elegant touch at affordable</p>
                   
                 <div className="card-deck"   >
-                {this.state.Item.slice(5, this.state.showItems).map((item, idx)=>  {
+                {users.slice(5, this.state.showItems).map((item, idx)=>  {
                      const logo = require(`${item.picture}`);
                     return(
       <div className="card section-card" key={idx}   index={idx} >
@@ -71,7 +70,7 @@ componentDidMount(){
    
 </div>
 <div className={this.state.collapse?`card-deck img_show `:"card-deck img_hide"}>
-{this.state.Item.slice(11, this.state.showItems1).map((item, idx)=>  {
+{users.slice(11, this.state.showItems1).map((item, idx)=>  {
                      const logo = require(`${item.picture}`);
                     return(
       <div className="card section-card" key={idx}   index={idx} >
@@ -98,4 +97,6 @@ componentDidMount(){
  }
 }
 
-export default Section;
+const mapStateToProps  = (state) => ({users:state.users})
+
+export default connect(mapStateToProps, {getUsers})(Section)

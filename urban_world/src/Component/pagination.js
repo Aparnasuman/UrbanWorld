@@ -1,10 +1,10 @@
 import React from 'react';
-import axios from 'axios';
+import {connect} from 'react-redux';
+import {getUsers} from '../store/actions/usersAction'
  class PagiNate extends React.Component {
       constructor() {
         super();
         this.state = {
-            Item : [],
           currentPage: 1,
           todosPerPage: 4
         };
@@ -17,19 +17,16 @@ import axios from 'axios';
         });
       }
       componentDidMount(){
-        axios.get(`http://localhost:3000/woodenItem`).then(res => {
-            const Item = res.data;
-            console.log(Item);
-            this.setState({ Item  });
-          })
+        this.props.getUsers()
     }
       render() {
-        const { Item, currentPage, todosPerPage } = this.state;
+        const {users} = this.props.users
+        const { currentPage, todosPerPage } = this.state;
 
         // Logic for displaying current todos
         const indexOfLastTodo = currentPage * todosPerPage;
         const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
-        const currentTodos = Item.slice(indexOfFirstTodo, indexOfLastTodo);
+        const currentTodos = users.slice(indexOfFirstTodo, indexOfLastTodo);
 
         const renderTodos = currentTodos.map((item, index) => {
             const logo = require(`${item.picture}`);
@@ -47,7 +44,7 @@ import axios from 'axios';
 
         // Logic for displaying page numbers
         const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(Item.length / todosPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(users.length / todosPerPage); i++) {
           pageNumbers.push(i);
         }
 
@@ -78,6 +75,8 @@ import axios from 'axios';
       }
     }
 
-export default PagiNate;
+    const mapStateToProps  = (state) => ({users:state.users})
+
+    export default connect(mapStateToProps, {getUsers})(PagiNate)
 
   

@@ -9,9 +9,22 @@ import {
   CarouselCaption
 } from 'reactstrap';
  //chck this 
- var items;
-items = [];
 
+ function getItmes()
+ {
+   return new Promise( (resolve, reject)=> {
+    axios.get(`http://localhost:3000/woodenItem`).then((res ,error)=> {
+      if(error)reject(error);
+       else resolve(res.data);
+     })
+  })
+  
+ }
+var items=[];
+getItmes().then((data)=> {
+  items = data;
+});
+console.log(`items are ${items}`)
 const Example = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -36,14 +49,10 @@ const Example = (props) => {
 
     // here it should be getWoodenItems
    
-    axios.get(`http://localhost:3000/woodenItem`).then(res => {
-      
-     items = res.data;
-      console.log(items);
-    })
+  
   
   });
- 
+ console.log(items);
   const slides = items.map((item, index) => {
     const logo = require(`${item.picture}`);
     return (
