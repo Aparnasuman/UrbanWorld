@@ -14,6 +14,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 const NavBaritem = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   
@@ -49,20 +50,17 @@ const NavBaritem = (props) => {
               <DropdownMenu right>
                
                 <DropdownItem>
-                 Sofa Set
+               <Link to='/sofa'> Sofa Set</Link> 
                 </DropdownItem>
                 <DropdownItem>
-              Wooden Dining Table
+                <Link to='/table'> Wooden Dining Table</Link>
                 </DropdownItem>
                 <DropdownItem  />
                 <DropdownItem>
-                  chair
+                <Link to='/sofa'>   chair </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  Side Table
-                </DropdownItem>
-                <DropdownItem>
-                  Stool
+                <Link to='/table'>   Side Table </Link>
                 </DropdownItem>
               </DropdownMenu>
              

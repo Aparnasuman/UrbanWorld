@@ -1,50 +1,51 @@
 import React from 'react';
-import axios from 'axios';
+import {connect} from 'react-redux'
+import {getUsers} from '../store/actions/usersAction'
 class Table extends  React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            Item: [],
-            showItems: 14,
-        
-             }
-        }
+   
 
     componentDidMount(){
 
         // here name should 
-        axios.get(`http://localhost:3000/woodenItem`).then(res => {
-            const Item = res.data;
-            console.log(Item);
-            this.setState({ Item  });
-          })
+        this.props.getUsers()
     }
  
 render(){
+    const {users} = this.props.users
+    console.log(this.props.users)
     return(
-       
-                
-        <div className="card-deck img_1"   >
-        {this.state.Item.filter(item => item.name.includes('Tab')).map((item, idx)=>  {
+          
+        <div className='itm-sofa'>
+           
+        <div className=" box"   >
+          
+        {users.filter(item => item.name.includes('Ta')).map((item, idx)=>  {
              const logo = require(`${item.picture}`);
             console.log(item);
             
             return(
-<div className="card section-card sc-main" key={idx}   index={idx} >
-<div className="card-body main-sc">
-<img src={logo} alt={item.name} className="card-img-top img_pag"/>
+    
+<div className=" main-card" key={idx}   index={idx} >
+<div className="card-image">
+<img src={logo} alt={item.name} className="card-img-top img-fix"/>
+<span to="/" className="btn-floating halfway-fab waves-effect waves-light btn-danger"><i class="fas fa-plus"></i></span>
+</div>
+<div className="card-content">
 <h5 className="card-title">{item.name}</h5>
         <p className="card-text">{item.details}</p>
-        <p className="card-text"><small className="text-muted">{item.price}</small></p>
-        <button className="btn rounded-pill bg-light btn-lg">{item.name}</button>
+        <p className="card-text"><small className="text-danger">{item.price}</small></p>
+       </div> 
 </div>
-</div>
+
 
         ) })}
         
+</div>
 </div>
     )
 
 }
 }
-export default Table;
+const mapStateToProps  = (state) => ({users:state.users})
+
+export default connect(mapStateToProps, {getUsers})(Table)

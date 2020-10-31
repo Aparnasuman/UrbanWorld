@@ -6,7 +6,8 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './home';
-
+import Sofa from './Component/sofa';
+import Table from './Component/Table';
 
 
 
@@ -17,9 +18,9 @@ export default function App() {
       <div className="App">
        <NavBaritem/>
         <Switch>
-       
+          <Route path="/sofa" component={Sofa} />
+          <Route path="/table" component={Table} />
           <Route path="/" component={Home} />
-       
         </Switch>
         </div>
     </Router>

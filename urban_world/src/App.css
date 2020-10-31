@@ -37,13 +37,54 @@
   color:#ffff;
 
 }
+.box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+.sf_C{
+	margin: 0px;
+	background-color: #fff;
+}
 .contact{
 	margin-top: 200px;
 }
 .navbar-light .navbar-text {
   color: #ffff;
 }
+.itm-sofa{
+	background-color: #ffffff;
+}
+a {
+    color: #d39e00;
+    text-decoration: none !important;
+    background-color: transparent;
+}
+.box{
+	display: flex;
+	flex-wrap: wrap;
 
+	margin: 0px !important;
+	padding: 20px;
+}
+.halfway-fab{
+	float: right;
+	padding: 8px 12px;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+.main-card {
+width: 300px;
+margin: 20px 10px;
+
+	background-color: #fff;
+	box-shadow: 10px 10px 5px 5px #aaaaaa;
+    border-radius: 2px;
+}
+.img-fix{
+	height: 200px;
+}
 .btn-lg, .btn-group-lg > .btn {
   padding: 1.0rem 4rem !important;
   font-size: 1.45rem !important;
