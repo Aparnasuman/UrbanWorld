@@ -1,5 +1,6 @@
 import '../App.css';
 import React, { useState } from 'react';
+import SearchBar from './search'
 import {
   Collapse,
   Navbar,
@@ -17,6 +18,7 @@ import {
 import { Link } from 'react-router-dom';
 const NavBaritem = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+ 
   
   const toggle = () => setIsOpen(!isOpen);
 
@@ -27,10 +29,8 @@ const NavBaritem = (props) => {
 
         <Navbar color="light" light expand="md">
          <NavbarBrand href="/">UrbanWorld</NavbarBrand>
-        <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-      </form>
-   
+       
+            <SearchBar/>
         <NavbarToggler onClick={toggle} />
        
         <Collapse isOpen={isOpen} navbar>

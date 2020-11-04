@@ -1,4 +1,4 @@
-import {GET_USERS, USERS_ERROR} from '../types'
+import {GET_USERS, USERS_ERROR,SEARCH} from '../types'
 import axios from 'axios'
 
 export const getUsers = () => async dispatch => {
@@ -18,3 +18,6 @@ export const getUsers = () => async dispatch => {
     }
 
 }
+export function search(value) {
+    return dispatch => dispatch({type: SEARCH, payload: value});
+  }

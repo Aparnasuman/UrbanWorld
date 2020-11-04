@@ -79,8 +79,11 @@ width: 300px;
 margin: 20px 10px;
 
 	background-color: #fff;
-	box-shadow: 10px 10px 5px 5px #aaaaaa;
+	box-shadow: 10px 10px 5px 5px #aaaaaa ;
     border-radius: 2px;
+}
+.card-content{
+	padding: 25px;
 }
 .img-fix{
 	height: 200px;

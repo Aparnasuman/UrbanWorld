@@ -1,7 +1,9 @@
-import {GET_USERS} from '../types'
+import {GET_USERS,SEARCH} from '../types'
 
 const initialState = {
     users:[],
+    value: '', 
+    works: [],
     loading:true
 }
 
@@ -16,6 +18,12 @@ export default function(state = initialState, action){
             loading:false
 
         }
+        case SEARCH: {
+            const {value} = action.payload;
+            const works = state.users.filter((val) => val.includes(value));
+            return {...state, value, works};
+          }
+
         default: return state
     }
 
