@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import Section  from './Component/Section';
 import Article from './Component/Article';
@@ -36,13 +35,11 @@ class Home extends React.Component{
      </div>
     
  </div>
-
      <Article/>
      <Section />
      <Paginate/>
     <Slider />
     <Section1/>
-  
  
     <div ref={(node) => this.contact = node}>
     <Footer/>

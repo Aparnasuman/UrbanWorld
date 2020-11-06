@@ -19,8 +19,8 @@ export default function(state = initialState, action){
 
         }
         case SEARCH: {
-            const {value} = action.payload;
-            const works = state.users.filter((val) => val.includes(value));
+            const value = action.payload;
+            const works = state.users.filter((val) => val.name.includes(value));
             return {...state, value, works};
           }
 

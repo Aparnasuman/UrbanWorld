@@ -1,7 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {search} from '../store/actions/usersAction'
+import {bindActionCreators} from 'redux'
 class SearchBar extends React.Component{
+  
     render(){
         const {search, value} = this.props;
         return(
@@ -14,11 +16,11 @@ class SearchBar extends React.Component{
     }
 }
 function mapStateToProps({works}) {
-    return {value: works.value};
+    return {value: works?.value};
   }
   
   function mapDispatchToProps(dispatch) {
     return bindActionCreators({search}, dispatch);
   }
 
-export default connect(mapStateToProps,mapDispatchToProps, {search})(SearchBar)
+export default connect(mapStateToProps,mapDispatchToProps)(SearchBar)
