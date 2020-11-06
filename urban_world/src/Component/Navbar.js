@@ -66,7 +66,7 @@ const NavBaritem = (props) => {
              
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText><button className="btn rounded-pill ml-2 sign_in " >Sign in</button></NavbarText>
+          <NavbarText><button className="btn rounded-pill ml-2 sign_in " ><Link to='/sign'>Sign in</Link></button></NavbarText>
         </Collapse>
       </Navbar>
  

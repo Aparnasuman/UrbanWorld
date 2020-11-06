@@ -8,7 +8,7 @@ import {
 import Home from './home';
 import Sofa from './Component/sofa';
 import Table from './Component/Table';
-
+import LoginForm from './Component/Loginform';
 
 
 export default function App() {
@@ -20,7 +20,9 @@ export default function App() {
         <Switch>
           <Route path="/sofa" component={Sofa} />
           <Route path="/table" component={Table} />
+          <Route path="/sign" component={LoginForm}/>
           <Route path="/" component={Home} />
+           
         </Switch>
         </div>
     </Router>

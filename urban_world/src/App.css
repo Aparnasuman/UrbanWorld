@@ -82,6 +82,24 @@ margin: 20px 10px;
 	box-shadow: 10px 10px 5px 5px #aaaaaa ;
     border-radius: 2px;
 }
+.Login-form{
+width: 500px;	
+padding: 3rem;
+color: #ffffff;
+background-color: #d3ab0094;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color:#d3ab0094;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #d3ab0094;
+}
+.btn-login {
+    color: #fff;
+    background-color: #d39e00b8;
+    border-color: #d39e0085;
+}
 .card-content{
 	padding: 25px;
 }
