@@ -1,22 +1,36 @@
 import React from 'react';
-
+import Login from './login';
+import SignUp from './signup';
 class LoginForm extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+         isOpen:true
+          }
+    }
+    handleChange(button){
+        if(this.state.isOpen && button != 'login') {
+            this.setState({isOpen:false})
+          } else if(!this.state.isOpen && button != 'signUp') {
+            this.setState({isOpen:true})
+          }
+    }
 render(){
     return(
         <form className="d-flex justify-content-center p-5">
         <div className="Login-form ">
-        <button type="submit" class="btn btn-lg btn-login">SignUp</button> 
-        <button type="submit" class="btn btn-lg btn-login">Login</button>
-            <div className="form-group ">
-            <label for="user">User</label>
-            <input type="email" class="form-control" id="user" aria-describedby="user" placeholder="User"/>
-            </div>
-            <div class="form-group">
-           <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password"/>
-        </div>
-        <button type="submit" class="btn btn-login">Submit</button>
-        </div>
+        <button type="submit" className={ this.state.isOpen? '   btn btn-lg  btn-login' : 'btn btn-lg ' }  onClick={() => this.handleChange('login')}>Login</button> 
+        <button type="submit" className={ this.state.isOpen ? ' btn btn-lg ' : '  btn btn-lg btn-login ' }   onClick={() => this.handleChange('signUp')}>SignUp</button>
+        {
+                  this.state.isOpen ?   
+                   <Login/>:<SignUp/> 
+       
+        }
+              <button type="submit" class="btn btn-login">SignUp</button>
+              </div>
+                
+      
+        
         </form>
     )
 }

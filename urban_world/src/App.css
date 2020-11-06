@@ -88,6 +88,14 @@ padding: 3rem;
 color: #ffffff;
 background-color: #d3ab0094;
 }
+.btn-login{
+	background-color: black !important;
+	color: #ffff;
+}
+.btn-login:hover {
+    color: #d3ab0094;
+    text-decoration: none;
+}
 .form-control:focus {
     color: #495057;
     background-color: #fff;
@@ -112,17 +120,17 @@ background-color: #d3ab0094;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
-.btn-lg {
+.contact {
   color: #ffff !important;
   background-color: #bc9d4080 !important;
   border-color: #bc9d4080  !important;
 }
-.btn-lg:hover {
+.contact:hover {
   color: #ffff !important;
   background-color: black !important;
   border-color: black !important;
 }
-.sign_in {
+.contact {
   color: #ffff !important;
 background-color: #7d8753bf !important;
 width: 100px;
