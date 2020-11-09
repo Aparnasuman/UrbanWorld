@@ -187,14 +187,37 @@
 
 
   ],
-  "comments": [
+  "signUp": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "firstName": "Aparna",
+      "lastName": "Suman",
+      "email": "Aparnasuman2@gmail.com",
+      "userName": "Aparnasuman2",
+      "password":"suman123"
+      
+    } ,
+     {
+      "id": 2,
+      "firstName": "Shubham",
+      "lastName": "kumar",
+      "email": "sshubhamk1@gmail.com",
+      "userName": "sshubhamk1",
+      "password":"shubham123"
     }
+     
+
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "login": [{
+    "email": "Aparnasuman2@gmail.com",
+    "userName":"Aparnasuman2",
+    "password":"suman123"
+  }],
+  "forgetpassword": [{
+    "email": "Aparnasuman2@gmail.com"
+  }],
+  "Newpassword": [{
+    "password":"suman124"
+  }]
+  
 }

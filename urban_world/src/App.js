@@ -14,17 +14,17 @@ import LoginForm from './Component/Loginform';
 export default function App() {
   return (
 
-    <Router>
+    <Router >
       <div className="App">
-       <NavBaritem/>
+        <NavBaritem />
         <Switch>
           <Route path="/sofa" component={Sofa} />
           <Route path="/table" component={Table} />
-          <Route path="/sign" component={LoginForm}/>
+          <Route path="/sign" component={LoginForm} />
           <Route path="/" component={Home} />
-           
+
         </Switch>
-        </div>
+      </div>
     </Router>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {getUsers} from '../store/actions/usersAction'
+
 class Section1 extends  React.Component{
     constructor(props){
         super(props);
@@ -12,7 +13,7 @@ class Section1 extends  React.Component{
         }
 
     componentDidMount(){
-       
+      
         // here name should 
         this.props.getUsers()
       

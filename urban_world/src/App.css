@@ -14,6 +14,7 @@
   background: url('./App.jpg');
   background-size:cover;
   background-position:center center;
+
   background-attachment:fixed;
 }
 .jumbotron-fluid{
@@ -133,8 +134,9 @@ background-color: #d3ab0094;
 .contact {
   color: #ffff !important;
 background-color: #7d8753bf !important;
-width: 100px;
+width:235px;
 }
+
 .article{
   background-color: #00000057;
 }
@@ -249,7 +251,9 @@ width: 100px;
 	font: normal 36px 'Open Sans', cursive;
 	margin: 0;
 }
-
+.form-data{
+	padding: 90px 0px !important;
+}
 .footer-distributed h3 span{
 	color:  #d39e00;
 }
